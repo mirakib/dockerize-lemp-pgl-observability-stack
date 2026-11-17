@@ -7,6 +7,6 @@ contactPoints:
       - uid: lemp_email_receiver
         type: email
         settings:
-          addresses: mirakib.dev@gmail.com
+          addresses: your-email@gmail.com
           singleEmail: false
         disableResolveMessage: false
