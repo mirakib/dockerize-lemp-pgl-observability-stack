@@ -327,16 +327,6 @@ Working through this project exercises:
 - Extending an existing Docker observability stack to Kubernetes using service discovery, RBAC, kube-state-metrics, Alloy, port forwarding, logs, and Prometheus remote write.
 - Diagnosing telemetry pipelines by checking service health, scrape targets, container logs, configuration files, and persistent state.
 
-## Screenshots
-
-| Application | Prometheus | cAdvisor |
-| --- | --- | --- |
-| ![Application page](Images/web-page.png) | ![Prometheus UI](Images/prom-ui.png) | ![cAdvisor](Images/cadvisor.png) |
-
-| MySQL Exporter dashboard | NGINX Exporter dashboard | Node Exporter dashboard |
-| --- | --- | --- |
-| ![MySQL Exporter](Images/mysql-exporter.png) | ![NGINX Exporter](Images/nginx-exporter.png) | ![Node Exporter](Images/node-exporter.png) |
-
 ## Repository layout
 
 ```text
