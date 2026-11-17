@@ -1,18 +1,18 @@
 # LEMP Application Observability Lab
 
-A hands-on observability project that runs a small PHP/MySQL application alongside a Docker Compose monitoring and logging stack. It brings together application hosting, infrastructure and service metrics, dashboards, alert delivery, and an optional Kubernetes telemetry experiment.
+A hands-on observability project that runs a small `PHP/MySQL` application alongside a `Docker Compose` monitoring and logging stack. It brings together application hosting, infrastructure and service metrics, dashboards, alert delivery, and an optional `Kubernetes` telemetry experiment.
 
 This is a learning and demonstration environment, not a production-hardened deployment. Several images use floating tags, metrics and exporter ports are published on the host, and some service credentials are intended only for local development. Review the security notes before exposing it beyond your machine.
 
 ## What the project does
 
-- Hosts a PHP email-list CRUD application using PHP-FPM, NGINX, and MariaDB.
-- Collects host and container metrics with Node Exporter and cAdvisor.
-- Monitors NGINX and MariaDB through their Prometheus exporters.
-- Scrapes metrics with Prometheus and evaluates a high-CPU alert rule.
-- Visualizes metrics and logs in Grafana with provisioned Prometheus and Loki data sources and dashboards.
-- Ships Docker container logs to Loki with Promtail.
-- Optionally collects Kubernetes pod logs and kube-state-metrics through Grafana Alloy.
+- Hosts a PHP email-list CRUD application using `PHP-FPM`, `NGINX`, and `MariaDB`.
+- Collects host and container metrics with `Node Exporter` and `cAdvisor`.
+- Monitors `NGINX` and `MariaDB` through their Prometheus exporters.
+- Scrapes metrics with `Prometheus` and evaluates a `high-CPU` alert rule.
+- Visualizes metrics and logs in `Grafana` with provisioned `Prometheus` and Loki data sources and dashboards.
+- Ships `Docker` container logs to `Loki` with `Promtail`.
+- Optionally collects E and `kube-state-metrics` through `Grafana Alloy`.
 
 ## Architecture
 
@@ -66,22 +66,22 @@ The Compose services communicate over the `lempnet` bridge network using service
 
 ## Technology and tools
 
-- **Application:** PHP 8.4, PDO, MySQL-compatible SQL, HTML, and CSS.
-- **Web and database:** NGINX, PHP-FPM, MariaDB.
-- **Containerization:** Docker, Docker Compose, Alpine-based application images, named volumes, and a bridge network.
-- **Metrics and alerting:** Prometheus, Node Exporter, cAdvisor, NGINX Prometheus Exporter, MySQL Exporter, Alertmanager.
-- **Logs and visualization:** Grafana, Loki, Promtail, and Grafana Alloy.
-- **Optional orchestration:** Kubernetes manifests, `kubectl`, kube-state-metrics, and Kubernetes RBAC.
+- **Application:** `PHP 8.4`, PDO, MySQL-compatible SQL, HTML, and CSS.
+- **Web and database:** `NGINX`, `PHP-FPM`, `MariaDB`.
+- **Containerization:** `Docker`, `Docker Compose`, Alpine-based application images, named volumes, and a bridge network.
+- **Metrics and alerting:** `Prometheus`, `Node Exporter`, `cAdvisor`, `NGINX Prometheus Exporter`, `MySQL Exporter`, `Alertmanager`.
+- **Logs and visualization:** `Grafana`, `Loki`, `Promtail`, and `Grafana Alloy`.
+- **Optional orchestration:** `Kubernetes` manifests, `kubectl`, kube-state-metrics, and Kubernetes RBAC.
 - **Configuration and provisioning:** YAML, Alloy River configuration, SQL initialization, Prometheus rules, and Grafana dashboard JSON.
 
 ## Requirements
 
 - Docker Desktop (Windows/macOS) or Docker Engine with the Docker Compose plugin (Linux).
-- At least 2 GB of memory available to Docker is recommended.
-- SMTP access if you want to test Alertmanager email notifications.
+- At least 4 GB of memory available to Docker is recommended.
+- `SMTP` access if you want to test `Alertmanager` email notifications.
 - For the optional Kubernetes integration: a running Kubernetes cluster, `kubectl`, and a usable kubeconfig at `$HOME/.kube/config`.
 
-The Compose file includes Linux host mounts for cAdvisor and Docker log files. On Docker Desktop, host metrics and log-file collection depend on the Docker Desktop environment and may be incomplete or unavailable. The application and dashboard stack can still be used without the optional Kubernetes integration.
+The Compose file includes Linux host mounts for `cAdvisor` and Docker log files. On Docker Desktop, host metrics and `log-file` collection depend on the Docker Desktop environment and may be incomplete or unavailable. The application and dashboard stack can still be used without the optional Kubernetes integration.
 
 ## Quick start
 
